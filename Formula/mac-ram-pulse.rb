@@ -1,8 +1,8 @@
 class MacRamPulse < Formula
   desc "Menu bar memory & swap monitor with idle-aware build-daemon autopilot"
   homepage "https://github.com/maker-KK/Mac-Ram-Pulse"
-  url "https://github.com/maker-KK/Mac-Ram-Pulse/archive/refs/tags/v5.7.0.tar.gz"
-  sha256 "dc6515cb2a8621ddfa8cf06bd76be17f8d9c7a8dc6a16ebf276e8dd9a8445033"
+  url "https://github.com/maker-KK/Mac-Ram-Pulse/archive/refs/tags/v5.8.0.tar.gz"
+  sha256 "9124b9daa9cfbda386a6a2b92dc8020fe2ea100cf40ab4447ca4090de670057e"
   license "MIT"
   head "https://github.com/maker-KK/Mac-Ram-Pulse.git", branch: "main"
 
