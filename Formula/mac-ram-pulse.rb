@@ -1,8 +1,8 @@
 class MacRamPulse < Formula
   desc "Menu bar memory & swap monitor with idle-aware build-daemon autopilot"
   homepage "https://github.com/maker-KK/Mac-Ram-Pulse"
-  url "https://github.com/maker-KK/Mac-Ram-Pulse/archive/refs/tags/v5.8.0.tar.gz"
-  sha256 "9124b9daa9cfbda386a6a2b92dc8020fe2ea100cf40ab4447ca4090de670057e"
+  url "https://github.com/maker-KK/Mac-Ram-Pulse/archive/refs/tags/v5.8.1.tar.gz"
+  sha256 "5c59ad080541a787f5aed9684b2538561d580474b8165b89e2bcc7b5390a9986"
   license "MIT"
   head "https://github.com/maker-KK/Mac-Ram-Pulse.git", branch: "main"
 
@@ -46,6 +46,6 @@ class MacRamPulse < Formula
     plist = app/"Contents/Info.plist"
     read = ->(key) { shell_output("/usr/libexec/PlistBuddy -c 'Print :#{key}' #{plist}").chomp }
     assert_equal "com.antigravity.MacRamPulse", read.call("CFBundleIdentifier")
-    assert_equal version.major_minor.to_s, read.call("CFBundleShortVersionString")
+    assert_equal version.to_s.delete_suffix(".0"), read.call("CFBundleShortVersionString")
   end
 end
